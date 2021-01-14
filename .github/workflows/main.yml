@@ -28,7 +28,7 @@ jobs:
       - name: AWS SNS - Publish Topic
   # You may pin to the exact commit or the version.
   # uses: nothingalike/sns-publish-topic@969b39c3261d06730c8ca679f82851ee93b9137d
-        #uses: nothingalike/sns-publish-topic@v1.7
+        uses: nothingalike/sns-publish-topic@v1.7
         with:
     # The message you want to send
           MESSAGE: testing
