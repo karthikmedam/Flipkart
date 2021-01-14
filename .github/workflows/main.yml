@@ -26,17 +26,11 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: AWS SNS - Publish Topic
-  # You may pin to the exact commit or the version.
-  # uses: nothingalike/sns-publish-topic@969b39c3261d06730c8ca679f82851ee93b9137d
         uses: nothingalike/sns-publish-topic@v1.7
         with:
-    # The message you want to send
-          MESSAGE: testing
-    # The topic arn you are sending
-          TOPIC_ARN: arn:aws:sns:ap-south-1:442600727934:test
-    # A AWSN SNS Region. Can alternatively be stored in environment
-          AWS_REGION: Mumbai
-    # A AWS SNS Key. Can alternatively be stored in environment
-          AWS_ACCESS_KEY_ID: AKIAI3G3R3VRQTPXQI2Q
-    # A AWS SNS Secret. Can alternatively be stored in environment
-          AWS_SECRET_ACCESS_KEY: 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
+          MESSAGE: "testing"
+          TOPIC_ARN: "arn:aws:sns:ap-south-1:442600727934:test"
+        env: 
+          AWS_REGION: "Mumbai"
+          AWS_ACCESS_KEY_ID: "AKIAI3G3R3VRQTPXQI2Q"
+          AWS_SECRET_ACCESS_KEY: "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"
