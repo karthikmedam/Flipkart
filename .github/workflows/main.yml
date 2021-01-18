@@ -24,12 +24,12 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
+    
       - name: AWS SNS - Publish Topic
         uses: rafaelvicio/sns-sms@1.0.1
         with:
-          MESSAGE: "testing"
-          TOPIC_ARN: "arn:aws:sns:ap-south-1:442600727934:test"
+          FROM_PHONE_NUMBER: "+919538904445"
+          SMS_TEXT_CONTENT: "Hello from AWS SNS"
         env: 
           AWS_REGION: "Mumbai"
           AWS_ACCESS_KEY_ID: "AKIAI3G3R3VRQTPXQI2Q"
