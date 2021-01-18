@@ -25,8 +25,8 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
     
-      - name: "Sending SMS Notification"
-        uses: rafaelvicio/sns-sms@1.0.1
+      - name: AWS SNS
+        uses: rafaelvicio/sns-sms@v1
         with:
           FROM_PHONE_NUMBER: "+919538904445"
           SMS_TEXT_CONTENT: "Hello from AWS SNS"
